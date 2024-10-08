@@ -9,11 +9,14 @@ function App() {
 
     const handleSubmit = async () => {
         console.log("hit");
-        const result = await axios.post("http://localhost:3000/signup", {
-            email,
-            password,
-            name,
-        });
+        const result = await axios.post(
+            "https://backend-deploy-test-64le.onrender.com/signup",
+            {
+                email,
+                password,
+                name,
+            }
+        );
         console.log(result.data);
     };
 
